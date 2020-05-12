@@ -1,0 +1,9 @@
+title: pagination
+type: object
+properties:
+  total:
+    type: number
+  offset:
+    type: number
+  limit:
+    type: number

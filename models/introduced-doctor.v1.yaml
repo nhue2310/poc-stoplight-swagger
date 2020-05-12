@@ -1,0 +1,21 @@
+title: Introduced-doctor
+type: object
+properties:
+  collaboratorId:
+    type: string
+  collaboratorName:
+    type: string
+  collaboratorKanaName:
+    type: string
+  phoneNumber:
+    type: string
+  introducedOrganization:
+    type: array
+    items:
+      title: introduced-organization
+      type: object
+      properties:
+        organizationId:
+          type: string
+        organizationName:
+          type: string

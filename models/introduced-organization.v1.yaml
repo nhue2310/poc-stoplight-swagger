@@ -1,0 +1,7 @@
+title: introduced-organization
+type: object
+properties:
+  organizationId:
+    type: string
+  organizationName:
+    type: string

@@ -1,0 +1,18 @@
+title: staff
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  kanaName:
+    type: string
+  departments:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string

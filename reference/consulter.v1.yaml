@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: consulter
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /consulter/search:
+    parameters: []
+    post:
+      summary: ''
+      operationId: post-consulter-search
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsulterSearchResponse'
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: offset
+          description: ''
+        - schema:
+            type: number
+          in: query
+          name: limit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsulterSearchRequest'
+        description: consulter search request
+components:
+  schemas:
+    ConsulterSearchRequest:
+      title: ConsulterSearchRequest
+      type: object
+      properties:
+        consulterId:
+          type: string
+        name:
+          type: string
+        birthDate:
+          type: string
+        phoneNumber:
+          type: array
+          items:
+            type: string
+        introduced:
+          type: string
+        staffInCharge:
+          type: string
+        doctorInCharge:
+          type: string
+    ConsulterSearchResponse:
+      type: object
+      title: ''
+      properties:
+        consulters:
+          type: array
+          items:
+            $ref: ../models/consulter.v1.yaml
+        pagination:
+          $ref: ../models/pagination.v1.yaml
+  securitySchemes: {}

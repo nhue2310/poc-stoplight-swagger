@@ -1,0 +1,44 @@
+x-examples: {}
+type: object
+title: Consulter
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  kanaName:
+    type: string
+  birhtDate:
+    type: string
+  gender:
+    type: string
+    enum:
+      - male
+      - female
+      - other
+      - unknow
+  postalCode:
+    type: string
+  address:
+    type: string
+  phoneNumber:
+    type: array
+    items:
+      type: string
+      maxLength: 5
+      minLength: 0
+  relatedPatient:
+    type: string
+  email:
+    type: string
+    format: email
+  updater:
+    type: string
+  updatedDate:
+    type: string
+    format: date
+  createdDate:
+    type: string
+    format: date
+  note:
+    type: string
